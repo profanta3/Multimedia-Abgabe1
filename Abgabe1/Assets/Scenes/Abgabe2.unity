@@ -1517,9 +1517,9 @@ GameObject:
   - component: {fileID: 1661651021}
   - component: {fileID: 1661651024}
   - component: {fileID: 1661651023}
-  - component: {fileID: 1661651025}
   - component: {fileID: 1661651022}
   - component: {fileID: 1661651026}
+  - component: {fileID: 1661651025}
   m_Layer: 0
   m_Name: Spieler
   m_TagString: Player
@@ -1616,10 +1616,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1661651020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a395f133154b7c428fa44c9f7c1d12a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b06f86d0731dc945ad8cb267a661c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Speed: 0.5
+  movementSpeed: 8
+  drehGeschwindigkeit: 10
+  cameraPosition: {fileID: 93909533}
+  xMove: 0
+  zMove: 0
+  text: {fileID: 0}
 --- !u!65 &1661651026
 BoxCollider:
   m_ObjectHideFlags: 0

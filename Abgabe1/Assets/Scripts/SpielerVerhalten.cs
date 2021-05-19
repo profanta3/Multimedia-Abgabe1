@@ -11,8 +11,8 @@ public class SpielerVerhalten : MonoBehaviour
     public float drehGeschwindigkeit = 10f;
     public Transform cameraPosition;
 
-    private float xMove;
-    private float zMove;
+    public float xMove;
+    public float zMove;
 
     //UI
     public Text text;
@@ -22,8 +22,8 @@ public class SpielerVerhalten : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xMove = Input.GetAxis("Horizontal");
-        zMove = Input.GetAxis("Vertical");
+        //xMove = Input.GetAxis("Horizontal");
+        //zMove = Input.GetAxis("Vertical");
 
         float winkel = xMove * drehGeschwindigkeit * Time.deltaTime;
         Vector3 targetDirection = new Vector3(Mathf.Sin(winkel), 0f, Mathf.Cos(winkel));
@@ -40,7 +40,7 @@ public class SpielerVerhalten : MonoBehaviour
             other.gameObject.SetActive(false);
             score++;
             //Debug.Log("Score: " + score);
-            text.text = Convert.ToString(score);
+            //text.text = Convert.ToString(score);
         }
     }
 }

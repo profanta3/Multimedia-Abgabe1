@@ -5,11 +5,11 @@ using Vuforia;
 
 public class VuforiaSpielerVerhalten : MonoBehaviour
 {
-    private SpielerController _SpielerController;
+    private SpielerVerhalten _SpielerVerhalten;
     // Start is called before the first frame update
     void Start()
     {
-        _SpielerController = GameObject.FindGameObjectWithTag("Player").GetComponent<SpielerController>();
+        _SpielerVerhalten = GameObject.FindGameObjectWithTag("Player").GetComponent<SpielerVerhalten>();
 
         VirtualButtonBehaviour[] vbs = GetComponentsInChildren<VirtualButtonBehaviour>();
         for (int i = 0; i < vbs.Length; ++i)
@@ -25,28 +25,31 @@ public class VuforiaSpielerVerhalten : MonoBehaviour
     {
         if (vb.VirtualButtonName == "ForwardBtn")
         {
-            _SpielerController.Move(Vector3.forward);
+            Debug.Log("forward button pressed");
+            _SpielerVerhalten.zMove = 1;
         }
-        else if (vb.VirtualButtonName == "RightBtn")
+        if (vb.VirtualButtonName == "RightBtn")
         {
-            _SpielerController.Move(Vector3.right);
+            Debug.Log("right button pressed");
+            _SpielerVerhalten.xMove = 1;
         }
-        else if (vb.VirtualButtonName == "LeftBtn")
+        if (vb.VirtualButtonName == "LeftBtn")
         {
-            _SpielerController.Move(Vector3.left);
+            Debug.Log("left button pressed");
+            _SpielerVerhalten.xMove = -1;
         }
-        else if (vb.VirtualButtonName == "BackBtn")
+        if (vb.VirtualButtonName == "BackBtn")
         {
-            _SpielerController.Move(Vector3.back);
+            _SpielerVerhalten.zMove = -1;
+            Debug.Log("back button pressed");
         }
-        //Debug.Log("Button pressed");
     }
 
     public void OnButtonReleased(VirtualButtonBehaviour vb)
     {
         Debug.Log("Button released");
-        _SpielerController.Move(Vector3.zero);
+        
+        _SpielerVerhalten.xMove = 0;
+        _SpielerVerhalten.zMove = 0;
     }
-
-    
 }

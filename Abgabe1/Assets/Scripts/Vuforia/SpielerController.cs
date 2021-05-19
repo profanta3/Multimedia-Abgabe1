@@ -7,6 +7,7 @@ public class SpielerController : MonoBehaviour
     [SerializeField]
     private float _Speed = 2;
     private Vector3 direction;
+    private Vector3 rotation;
     private Transform _Player;
     // Start is called before the first frame update
     void Start()
@@ -18,11 +19,17 @@ public class SpielerController : MonoBehaviour
     void Update()
     {
         transform.position += (direction * _Speed * Time.deltaTime);
+        transform.rotation *= Quaternion.Euler(rotation);
     }
 
     public void Move(Vector3 dir)
     {
         direction = dir;
+    }
+
+    public void Rotate(Vector3 rot)
+    {
+        rotation = rot;
     }
 
     private void OnCollisionEnter(Collision collision)
