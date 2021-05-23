@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Coin_Pref : MonoBehaviour
 {
-
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         transform.Rotate(0, 0.3f, 0);
+        
     }
 }
