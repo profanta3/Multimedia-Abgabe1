@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
-    public Transform canvas;
+    public GameObject canvas;
 
     public bool MenuState { get; private set; }
 
@@ -39,7 +39,7 @@ public class UIController : MonoBehaviour
         {
             SceneManager.LoadScene(0);
             MenuState = false;
-            canvas.gameObject.SetActive(false);
+            canvas.SetActive(false);
             Time.timeScale = 1;
         }
     }
@@ -55,14 +55,14 @@ public class UIController : MonoBehaviour
     public void CloseMenu()
     {
         MenuState = false;
-        canvas.gameObject.SetActive(false);
+        canvas.SetActive(false);
         Time.timeScale = 1;
     }
 
     public void OpenMenu()
     {
         MenuState = true;
-        canvas.gameObject.SetActive(true);
+        canvas.SetActive(true);
         Time.timeScale = 0;
     }
 }

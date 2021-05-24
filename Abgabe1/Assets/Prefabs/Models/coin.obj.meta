@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 601e6c992f99dc343b594cffedd92ada
+guid: 6dc2ffaf21074d14981ced3ddbde6c32
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
@@ -7,18 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Circle_Circle_Material.001Mat
+      name: Circle_Circle_HintergrundMat
     second: {fileID: 2100000, guid: c458cbe1902b5914c9cdc69b1b00921d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Text.001_Text.001_Material.002Mat
+      name: Circle_Circle_RandMat
     second: {fileID: 2100000, guid: 5d768d26611078f478e3742f297a2475, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Text_Text_Material.002Mat
-    second: {fileID: 2100000, guid: 5d768d26611078f478e3742f297a2475, type: 2}
+      name: Text.001_Text.001_CoinMatMat
+    second: {fileID: 2100000, guid: fb08f01d85e6c0f4e83627725a331df7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Text_Text_CoinMatMat
+    second: {fileID: 2100000, guid: fb08f01d85e6c0f4e83627725a331df7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

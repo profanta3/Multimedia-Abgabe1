@@ -40,7 +40,7 @@ public class SpielerVerhalten : MonoBehaviour
             other.gameObject.SetActive(false);
             score++;
             //Debug.Log("Score: " + score);
-            //text.text = Convert.ToString(score);
+            text.text = Convert.ToString(score);
         }
     }
 }
